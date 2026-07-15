@@ -1,0 +1,1509 @@
+<!DOCTYPE html>
+<html lang="ca">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- === SEO TAGS === -->
+    <title>La Sexta Aumentada – Web Interactiva | Música</title>
+    <meta name="description" content="Descobreix les sisenes augmentades: Italiana, Francesa, Alemanya, Suïssa i Wagneriana. Web interactiva amb àudios, diagrames d'entrellat harmònic i qüestionari sobre teoria musical.">
+    <meta name="keywords" content="sisena augmentada, sisena italiana, sisena francesa, sisena alemanya, sisena suïssa, sisena wagneriana, música clàssica, harmonia, acords alterats, teoria musical">
+    <meta name="author" content="La Sexta Aumentada">
+    <meta name="robots" content="index, follow">
+    <meta name="language" content="ca">
+    <link rel="canonical" href="https://www.lasextaaumentada.com/">
+
+    <!-- === OPEN GRAPH (Facebook, LinkedIn, WhatsApp) === -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="La Sexta Aumentada – Web Interactiva de Teoria Musical">
+    <meta property="og:description" content="Explora les 5 sisenes augmentades: Italiana, Francesa, Alemanya, Suïssa i Wagneriana. Àudios, diagrames i qüestionari interactiu.">
+    <meta property="og:url" content="https://www.lasextaaumentada.com/">
+    <meta property="og:image" content="https://www.lasextaaumentada.com/Imagenes/interval-sisena-aumentada.jpg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:locale" content="ca_ES">
+    <meta property="og:site_name" content="La Sexta Aumentada">
+
+    <!-- === TWITTER CARDS === -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="La Sexta Aumentada – Web Interactiva de Teoria Musical">
+    <meta name="twitter:description" content="Explora les 5 sisenes augmentades: Italiana, Francesa, Alemanya, Suïssa i Wagneriana.">
+    <meta name="twitter:image" content="https://www.lasextaaumentada.com/Imagenes/interval-sisena-aumentada.jpg">
+
+    <!-- === SCHEMA.ORG STRUCTURED DATA (JSON-LD) === -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebSite",
+      "name": "La Sexta Aumentada",
+      "url": "https://www.lasextaaumentada.com/",
+      "description": "Web interactiva sobre les sisenes augmentades en música: Italiana, Francesa, Alemanya, Suïssa i Wagneriana.",
+      "inLanguage": "ca",
+      "educationalUse": "learning resource",
+      "audience": {
+        "@type": "Audience",
+        "audienceType": "music students and educators"
+      },
+      "about": {
+        "@type": "Thing",
+        "name": "Augmented Sixth Chords",
+        "description": "Music theory educational resource about augmented sixth chords"
+      }
+    }
+    </script>
+
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <style>
+        /* ============================================================
+           RESET / BASE
+           ============================================================ */
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        :root {
+            --gold: #8b6914;
+            --gold-light: #c9a84c;
+            --ink: #2c2c2c;
+            --paper: #ffffff;
+        }
+
+        html { scroll-behavior: smooth; }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            background: #f4efe4;
+            background-image: url('background-pentagram.svg');
+            background-repeat: repeat;
+            background-size: 400px 400px;
+            background-attachment: fixed;
+            color: #1a1a1a;
+            line-height: 1.6;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+            overflow-x: hidden;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* ============================================================
+           HEADER / FLAG NAVIGATION (sticky)
+           ============================================================ */
+        .site-header {
+            position: sticky;
+            top: 0;
+            z-index: 200;
+            background: rgba(255, 255, 255, 0.96);
+            border-bottom: 2px solid var(--ink);
+            backdrop-filter: blur(6px);
+        }
+        .site-header .header-inner {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 16px;
+            padding: 12px 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        .site-header .logo {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.3rem;
+            color: var(--gold);
+            letter-spacing: 1px;
+            font-weight: 700;
+            text-decoration: none;
+            white-space: nowrap;
+        }
+        .site-header .navbar ul {
+            display: flex;
+            gap: 16px;
+            list-style: none;
+            flex-wrap: wrap;
+            align-items: center;
+        }
+        .site-header .navbar ul li {
+            display: flex;
+            align-items: center;
+            gap: 7px;
+        }
+        .site-header .navbar ul li img {
+            width: 32px;
+            height: auto;
+            border-radius: 4px;
+            flex-shrink: 0;
+            box-shadow: 1px 1px 0 rgba(0,0,0,0.12);
+        }
+        .site-header .navbar a {
+            color: #555;
+            font-size: 0.82rem;
+            font-weight: 500;
+            text-decoration: none;
+            transition: color 0.3s;
+            letter-spacing: 0.3px;
+            white-space: nowrap;
+        }
+        .site-header .navbar a:hover { color: var(--gold); }
+        .site-header .nav-emoji { font-size: 1.1rem; line-height: 1; }
+        #menu-toggle { display: none; }
+        .menu-icono { width: 30px; display: none; cursor: pointer; }
+
+        /* ============================================================
+           HERO / LANDING (former splash)
+           ============================================================ */
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 40px 20px;
+            position: relative;
+        }
+        .hero::before {
+            content: '';
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            width: 700px;
+            height: 700px;
+            transform: translate(-50%, -50%);
+            background: radial-gradient(circle, rgba(201,168,76,0.18) 0%, transparent 60%);
+            pointer-events: none;
+            z-index: 0;
+        }
+        .hero-card {
+            position: relative;
+            z-index: 1;
+            background: rgba(255, 255, 255, 0.96);
+            border: 3px solid var(--ink);
+            border-radius: 20px;
+            padding: 56px 44px 44px;
+            max-width: 640px;
+            width: 100%;
+            box-shadow: 12px 12px 0 var(--ink);
+            animation: rise 0.7s cubic-bezier(0.16, 1, 0.3, 1) both;
+        }
+        @keyframes rise {
+            from { opacity: 0; transform: translateY(28px); }
+            to   { opacity: 1; transform: translateY(0); }
+        }
+        .badge {
+            display: inline-block;
+            font-size: 0.72rem;
+            font-weight: 700;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            color: var(--gold);
+            background: #f0e4c0;
+            border: 2px solid var(--gold);
+            border-radius: 30px;
+            padding: 6px 16px;
+            margin-bottom: 22px;
+        }
+        .hero-card h1 {
+            font-family: 'Playfair Display', Georgia, serif;
+            font-size: 2.6rem;
+            color: var(--gold);
+            margin-bottom: 14px;
+            letter-spacing: 0.5px;
+            line-height: 1.1;
+        }
+        .hero-card h1 .accent {
+            display: block;
+            font-size: 1.1rem;
+            color: var(--ink);
+            font-weight: 400;
+            letter-spacing: 3px;
+            margin-top: 10px;
+            text-transform: uppercase;
+        }
+        p.lead {
+            font-size: 1.02rem;
+            color: #444;
+            margin-bottom: 28px;
+            line-height: 1.7;
+            max-width: 480px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        .chips {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 10px;
+            margin-bottom: 34px;
+        }
+        .chip {
+            display: inline-flex;
+            align-items: center;
+            gap: 7px;
+            font-size: 0.82rem;
+            font-weight: 600;
+            color: #333;
+            background: #fff;
+            border: 2px solid var(--ink);
+            border-radius: 30px;
+            padding: 7px 15px;
+            box-shadow: 3px 3px 0 rgba(0,0,0,0.12);
+            transition: transform 0.25s, box-shadow 0.25s;
+        }
+        .chip:hover { transform: translateY(-3px); box-shadow: 5px 5px 0 rgba(0,0,0,0.12); }
+        .chip .flag { font-size: 1.05rem; line-height: 1; }
+
+        .btn {
+            display: inline-block;
+            padding: 16px 46px;
+            background: var(--gold);
+            color: #ffffff;
+            font-weight: 700;
+            font-size: 1.1rem;
+            border: 3px solid var(--ink);
+            border-radius: 8px;
+            text-decoration: none;
+            transition: transform 0.25s, box-shadow 0.25s, background 0.25s;
+            letter-spacing: 0.5px;
+            box-shadow: 5px 5px 0 var(--ink);
+            cursor: pointer;
+        }
+        .btn:hover { transform: translate(-2px, -2px); box-shadow: 8px 8px 0 var(--ink); background: #9c7716; }
+        .btn:active { transform: translate(2px, 2px); box-shadow: 2px 2px 0 var(--ink); }
+
+        .btn-secondary {
+            display: inline-block;
+            margin-top: 16px;
+            padding: 13px 34px;
+            background: #fff;
+            color: var(--gold);
+            font-weight: 700;
+            font-size: 1rem;
+            border: 3px solid var(--ink);
+            border-radius: 8px;
+            text-decoration: none;
+            transition: transform 0.25s, box-shadow 0.25s, background 0.25s;
+            letter-spacing: 0.5px;
+            box-shadow: 5px 5px 0 var(--ink);
+            cursor: pointer;
+        }
+        .btn-secondary:hover { transform: translate(-2px, -2px); box-shadow: 8px 8px 0 var(--ink); background: #fdf9f0; }
+        .btn-secondary:active { transform: translate(2px, 2px); box-shadow: 2px 2px 0 var(--ink); }
+
+        /* ============================================================
+           CONTENT HEADER (intro)
+           ============================================================ */
+        .content-header {
+            position: relative;
+            padding: 80px 0 40px;
+        }
+        .content-header::before {
+            content: '';
+            position: absolute;
+            top: 0; left: 0; right: 0; bottom: 0;
+            background: radial-gradient(ellipse at center, rgba(255,255,255,0.9) 0%, rgba(255,255,255,0.6) 100%);
+            pointer-events: none;
+            z-index: 0;
+        }
+        .content-header > .container { position: relative; z-index: 1; }
+        .header-txt { max-width: 800px; margin: 0 auto; text-align: center; }
+        .header-txt h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.6rem;
+            color: var(--gold);
+            margin-bottom: 24px;
+            line-height: 1.15;
+            letter-spacing: -0.5px;
+            font-weight: 700;
+        }
+        .header-txt p {
+            font-size: 1.05rem;
+            color: #444;
+            line-height: 1.8;
+            margin-bottom: 30px;
+        }
+        .header-img { text-align: center; margin-top: 20px; }
+        .header-img img {
+            max-width: 500px;
+            width: 100%;
+            height: auto;
+            border-radius: 50px;
+            box-shadow: 15px 30px rgba(0,0,0,0.1);
+            border: 1px solid rgba(139,105,20,0.2);
+        }
+
+        /* ============================================================
+           SOUND PORT
+           ============================================================ */
+        .sound-port-section {
+            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
+            padding: 60px 20px;
+            margin: 40px auto;
+            max-width: 900px;
+            border-radius: 20px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.5);
+            border: 1px solid rgba(201, 168, 76, 0.3);
+            position: relative;
+            overflow: hidden;
+        }
+        .sound-port-section::before {
+            content: '';
+            position: absolute;
+            top: -50%; left: -50%;
+            width: 200%; height: 200%;
+            background: radial-gradient(circle at 30% 50%, rgba(201,168,76,0.05) 0%, transparent 50%);
+            pointer-events: none;
+        }
+        .sound-port-title {
+            text-align: center;
+            font-family: 'Playfair Display', Georgia, serif;
+            font-size: 2rem;
+            color: #c9a84c;
+            margin-bottom: 8px;
+            letter-spacing: 2px;
+            position: relative;
+        }
+        .sound-port-subtitle {
+            text-align: center;
+            font-size: 0.9rem;
+            color: rgba(255,255,255,0.6);
+            margin-bottom: 35px;
+            letter-spacing: 1px;
+        }
+        .sound-port-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 16px;
+            padding: 0 10px;
+            position: relative;
+        }
+        .sound-port-card {
+            background: rgba(255,255,255,0.06);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255,255,255,0.1);
+            border-radius: 16px;
+            padding: 20px 14px 18px;
+            text-align: center;
+            cursor: pointer;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            position: relative;
+            overflow: hidden;
+            user-select: none;
+        }
+        .sound-port-card:hover {
+            background: rgba(255,255,255,0.12);
+            transform: translateY(-4px);
+            box-shadow: 0 12px 30px rgba(0,0,0,0.3);
+        }
+        .sound-port-card:active { transform: translateY(-1px) scale(0.97); }
+        .sound-port-card.playing {
+            border-color: #c9a84c;
+            box-shadow: 0 0 25px rgba(201,168,76,0.3), inset 0 0 25px rgba(201,168,76,0.05);
+            background: rgba(201,168,76,0.12);
+        }
+        .sound-port-card .port-icon {
+            font-size: 2.2rem;
+            margin-bottom: 8px;
+            display: block;
+            transition: transform 0.3s;
+        }
+        .sound-port-card.playing .port-icon { animation: pulse-glow 1s ease-in-out infinite alternate; }
+        @keyframes pulse-glow {
+            0% { transform: scale(1); filter: brightness(1); }
+            100% { transform: scale(1.1); filter: brightness(1.3); }
+        }
+        .sound-port-card .port-name {
+            font-size: 0.85rem;
+            font-weight: 700;
+            color: #fff;
+            letter-spacing: 0.5px;
+            margin-bottom: 4px;
+        }
+        .sound-port-card .port-badge {
+            font-size: 0.65rem;
+            color: rgba(255,255,255,0.5);
+            letter-spacing: 0.3px;
+            background: rgba(255,255,255,0.08);
+            padding: 2px 10px;
+            border-radius: 20px;
+            display: inline-block;
+        }
+        .sound-port-card .port-wave {
+            display: none;
+            justify-content: center;
+            align-items: center;
+            gap: 3px;
+            margin-top: 10px;
+            height: 20px;
+        }
+        .sound-port-card.playing .port-wave { display: flex; }
+        .sound-port-card .port-wave span {
+            width: 3px;
+            background: #c9a84c;
+            border-radius: 3px;
+            animation: wave 0.8s ease-in-out infinite alternate;
+        }
+        .sound-port-card .port-wave span:nth-child(1) { height: 8px;  animation-delay: 0s; }
+        .sound-port-card .port-wave span:nth-child(2) { height: 14px; animation-delay: 0.15s; }
+        .sound-port-card .port-wave span:nth-child(3) { height: 6px;  animation-delay: 0.3s; }
+        .sound-port-card .port-wave span:nth-child(4) { height: 18px; animation-delay: 0.1s; }
+        .sound-port-card .port-wave span:nth-child(5) { height: 10px; animation-delay: 0.25s; }
+        @keyframes wave {
+            0% { opacity: 0.3; transform: scaleY(0.5); }
+            100% { opacity: 1; transform: scaleY(1); }
+        }
+        .sound-port-stop {
+            display: block;
+            margin: 25px auto 0;
+            background: rgba(255,255,255,0.08);
+            border: 1px solid rgba(255,255,255,0.15);
+            color: rgba(255,255,255,0.7);
+            padding: 10px 30px;
+            border-radius: 30px;
+            font-size: 0.85rem;
+            cursor: pointer;
+            transition: all 0.3s;
+            letter-spacing: 1px;
+            font-family: inherit;
+        }
+        .sound-port-stop:hover {
+            background: rgba(255, 75, 75, 0.2);
+            border-color: rgba(255, 75, 75, 0.4);
+            color: #ff6b6b;
+        }
+
+        /* ============================================================
+           INFORMATION / CARDS
+           ============================================================ */
+        .information {
+            padding: 80px 0;
+            text-align: center;
+            position: relative;
+        }
+        .information::before {
+            content: '';
+            position: absolute;
+            top: 0; left: 0; right: 0; bottom: 0;
+            background: radial-gradient(ellipse at center, rgba(255,255,255,0.9) 0%, rgba(255,255,255,0.6) 100%);
+            pointer-events: none;
+            z-index: 0;
+        }
+        .information > .container { position: relative; z-index: 1; }
+        .information h2.section-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.3rem;
+            color: var(--gold);
+            margin-bottom: 40px;
+            letter-spacing: 2px;
+            font-weight: 700;
+        }
+        .crono-img img {
+            max-width: 90%;
+            width: 700px;
+            height: auto;
+            border-radius: 12px;
+            border: 2px solid var(--ink);
+            box-shadow: 6px 6px 0 rgba(0,0,0,0.15);
+            margin: 20px auto 40px;
+            display: block;
+            background: #fff;
+        }
+        .btn-1 {
+            display: inline-block;
+            padding: 12px 30px;
+            background: var(--gold);
+            color: #ffffff;
+            font-weight: 600;
+            font-size: 0.95rem;
+            border-radius: 4px;
+            text-decoration: none;
+            transition: transform 0.3s, box-shadow 0.3s;
+            letter-spacing: 0.5px;
+        }
+        .btn-1:hover { transform: translateY(-2px); box-shadow: 0 6px 20px rgba(139,105,20,0.3); }
+
+        .information-box {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            width: 100%;
+            margin-top: 20px;
+        }
+        .card-1 {
+            background: #ffffff;
+            border: 2px solid var(--ink);
+            border-radius: 16px;
+            padding: 28px 25px 30px;
+            text-align: center;
+            transition: transform 0.3s, box-shadow 0.3s;
+            scroll-margin-top: 100px;
+            box-shadow: 6px 6px 0 var(--ink);
+        }
+        .card-1:hover { transform: translateY(-5px); box-shadow: 10px 10px 0 var(--ink); }
+        .card-1 img {
+            width: 100%;
+            max-width: 300px;
+            height: auto;
+            border-radius: 8px;
+            margin-bottom: 20px;
+            border: 2px solid var(--ink);
+            background: #fff;
+            padding: 4px;
+            box-shadow: 3px 3px 0 rgba(0,0,0,0.15);
+        }
+        .card-1 h3 {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.35rem;
+            color: var(--gold);
+            margin-bottom: 14px;
+            letter-spacing: 0.5px;
+        }
+        .card-1 span.badge-type {
+            display: inline-block;
+            padding: 6px 16px;
+            background: #f0e4c0;
+            color: #5a4408;
+            font-size: 0.78rem;
+            font-weight: 700;
+            border-radius: 20px;
+            border: 2px solid var(--gold);
+            letter-spacing: 1px;
+            text-transform: uppercase;
+        }
+        .card-1 audio { width: 100%; margin-top: 12px; }
+
+        /* Entrellat section (voice leading diagram) */
+        .entrellat-section {
+            margin-top: 22px;
+            padding-top: 20px;
+            border-top: 2px solid var(--ink);
+            text-align: left;
+        }
+        .entrellat-section h4 {
+            font-family: 'Playfair Display', serif;
+            font-size: 1rem;
+            color: var(--gold);
+            margin-bottom: 10px;
+            letter-spacing: 0.5px;
+            text-align: center;
+        }
+        .entrellat-desc {
+            font-size: 0.85rem;
+            color: #444;
+            line-height: 1.7;
+            margin-bottom: 16px;
+            padding: 0 4px;
+            text-align: left;
+        }
+        .entrellat-desc strong { color: var(--gold); font-weight: 700; }
+        .entrellat-img {
+            width: 100%;
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+            border: 2px solid var(--ink);
+            background: #fff;
+            padding: 6px;
+            display: block;
+            box-shadow: 3px 3px 0 rgba(0,0,0,0.1);
+        }
+
+        /* ============================================================
+           QUIZ
+           ============================================================ */
+        .quiz-section {
+            padding: 80px 0;
+            position: relative;
+        }
+        .quiz-section::before {
+            content: '';
+            position: absolute;
+            top: 0; left: 0; right: 0; bottom: 0;
+            background: radial-gradient(ellipse at center, rgba(255,255,255,0.92) 0%, rgba(255,255,255,0.7) 100%);
+            pointer-events: none;
+            z-index: 0;
+        }
+        .quiz-wrapper {
+            position: relative;
+            z-index: 1;
+            width: 100%;
+            max-width: 720px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        .quiz-container {
+            background: #ffffff;
+            border: 3px solid var(--ink);
+            border-radius: 20px;
+            padding: 45px 40px;
+            box-shadow: 10px 10px 0 var(--ink);
+        }
+        .quiz-header {
+            text-align: center;
+            margin-bottom: 30px;
+            padding-bottom: 25px;
+            border-bottom: 3px solid var(--ink);
+        }
+        .quiz-header h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 2rem;
+            color: var(--gold);
+            letter-spacing: 1px;
+            font-weight: 700;
+        }
+        .quiz-header .subtitle {
+            color: #666;
+            font-size: 0.9rem;
+            margin-top: 8px;
+            font-weight: 400;
+            letter-spacing: 0.5px;
+        }
+        .progress-wrapper {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            margin-bottom: 30px;
+        }
+        .progress-track {
+            flex: 1;
+            height: 8px;
+            background: #e0e0e0;
+            border-radius: 4px;
+            overflow: hidden;
+            border: 1px solid var(--ink);
+        }
+        .progress-fill {
+            height: 100%;
+            width: 0%;
+            background: var(--gold);
+            border-radius: 4px;
+            transition: width 0.4s ease;
+        }
+        .progress-counter {
+            font-size: 0.85rem;
+            color: #555;
+            font-weight: 600;
+            min-width: 60px;
+            text-align: right;
+        }
+        .question-card {
+            background: #f9f6f0;
+            border: 2px solid var(--ink);
+            border-radius: 14px;
+            padding: 25px;
+            margin-bottom: 25px;
+        }
+        .question-number {
+            font-size: 0.8rem;
+            color: var(--gold);
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            font-weight: 700;
+            margin-bottom: 12px;
+        }
+        .question-text {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.25rem;
+            color: #1a1a1a;
+            line-height: 1.5;
+        }
+        .options-list {
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            margin-bottom: 20px;
+        }
+        .option-item {
+            background: #ffffff;
+            border: 2px solid #cccccc;
+            border-radius: 12px;
+            padding: 16px 20px;
+            cursor: pointer;
+            transition: all 0.25s ease;
+            font-weight: 500;
+            font-size: 0.95rem;
+            color: #333;
+            position: relative;
+            overflow: hidden;
+            box-shadow: 3px 3px 0 rgba(0,0,0,0.08);
+        }
+        .option-item::before {
+            content: '';
+            position: absolute;
+            left: 0; top: 0;
+            width: 4px; height: 100%;
+            background: transparent;
+            transition: background 0.25s ease;
+        }
+        .option-item:hover:not(.disabled) {
+            border-color: var(--gold);
+            background: #fdf9f0;
+            color: #1a1a1a;
+            transform: translateX(4px);
+            box-shadow: 5px 5px 0 rgba(0,0,0,0.08);
+        }
+        .option-item:hover:not(.disabled)::before { background: var(--gold); }
+        .option-item.correct { border-color: #2e7d32; background: #e8f5e9; color: #1b5e20; }
+        .option-item.correct::before { background: #2e7d32; }
+        .option-item.incorrect { border-color: #c62828; background: #ffebee; color: #b71c1c; }
+        .option-item.incorrect::before { background: #c62828; }
+        .option-item.disabled { cursor: default; opacity: 0.7; }
+        .option-item .option-letter {
+            display: inline-block;
+            width: 26px; height: 26px;
+            line-height: 26px;
+            text-align: center;
+            background: #f0e4c0;
+            border-radius: 6px;
+            font-size: 0.8rem;
+            font-weight: 700;
+            color: #5a4408;
+            margin-right: 12px;
+            border: 1px solid var(--gold);
+        }
+        .option-item.correct .option-letter { background: #c8e6c9; border-color: #2e7d32; color: #1b5e20; }
+        .option-item.incorrect .option-letter { background: #ffcdd2; border-color: #c62828; color: #b71c1c; }
+        .feedback-box {
+            padding: 20px 24px;
+            border-radius: 12px;
+            margin-bottom: 20px;
+            display: none;
+            font-size: 0.95rem;
+            line-height: 1.6;
+            border-left: 5px solid transparent;
+            animation: fadeSlideIn 0.3s ease;
+        }
+        @keyframes fadeSlideIn {
+            from { opacity: 0; transform: translateY(-8px); }
+            to   { opacity: 1; transform: translateY(0); }
+        }
+        .feedback-box.correct {
+            display: block;
+            background: #e8f5e9;
+            border-left-color: #2e7d32;
+            color: #1b5e20;
+            border: 2px solid #2e7d32;
+        }
+        .feedback-box.incorrect {
+            display: block;
+            background: #ffebee;
+            border-left-color: #c62828;
+            color: #b71c1c;
+            border: 2px solid #c62828;
+        }
+        .feedback-box .fb-label {
+            font-weight: 700;
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 6px;
+        }
+        .feedback-box.correct .fb-label { color: #2e7d32; }
+        .feedback-box.incorrect .fb-label { color: #c62828; }
+        .action-btn {
+            display: none;
+            width: 100%;
+            padding: 16px;
+            background: var(--gold);
+            color: #ffffff;
+            border: 2px solid var(--ink);
+            border-radius: 12px;
+            font-size: 1rem;
+            font-weight: 700;
+            font-family: 'Inter', sans-serif;
+            cursor: pointer;
+            transition: all 0.25s ease;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            box-shadow: 4px 4px 0 var(--ink);
+        }
+        .action-btn:hover { transform: translateY(-2px); box-shadow: 6px 6px 0 var(--ink); }
+        #result-screen {
+            display: none;
+            text-align: center;
+            padding: 20px 0;
+            animation: fadeSlideIn 0.4s ease;
+        }
+        .result-icon { font-size: 4rem; margin-bottom: 15px; }
+        #result-screen h3 {
+            font-family: 'Playfair Display', serif;
+            font-size: 2rem;
+            color: var(--gold);
+            margin-bottom: 10px;
+        }
+        #result-screen p { color: #666; font-size: 1rem; }
+        .score-box {
+            display: inline-block;
+            margin: 25px auto;
+            padding: 20px 50px;
+            background: #f9f6f0;
+            border: 2px solid var(--ink);
+            border-radius: 14px;
+            box-shadow: 5px 5px 0 rgba(0,0,0,0.1);
+        }
+        .score-num {
+            font-family: 'Playfair Display', serif;
+            font-size: 3.5rem;
+            color: var(--gold);
+            font-weight: 700;
+        }
+        #score-comment {
+            color: #555;
+            font-size: 1rem;
+            max-width: 450px;
+            margin: 0 auto 30px;
+            line-height: 1.6;
+        }
+        .result-actions {
+            display: flex;
+            gap: 15px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        .result-actions .action-btn { display: inline-block; width: auto; min-width: 200px; }
+        .back-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            color: #555;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 0.9rem;
+            padding: 14px 28px;
+            border: 2px solid var(--ink);
+            border-radius: 12px;
+            transition: all 0.25s ease;
+            box-shadow: 3px 3px 0 rgba(0,0,0,0.08);
+        }
+        .back-link:hover {
+            color: var(--gold);
+            border-color: var(--gold);
+            background: #fdf9f0;
+            box-shadow: 5px 5px 0 rgba(0,0,0,0.08);
+        }
+
+        /* ============================================================
+           FOOTER
+           ============================================================ */
+        .site-footer {
+            background: #1a1a1a;
+            color: #cfcfcf;
+            text-align: center;
+            padding: 40px 20px 30px;
+            margin-top: 60px;
+            border-top: 4px solid var(--gold);
+        }
+        .site-footer .footer-logo {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.4rem;
+            color: #c9a84c;
+            letter-spacing: 1.5px;
+            font-weight: 700;
+            margin-bottom: 10px;
+        }
+        .site-footer p {
+            font-size: 0.85rem;
+            color: #9a9a9a;
+            letter-spacing: 0.5px;
+            line-height: 1.6;
+        }
+        .site-footer .footer-links {
+            margin-top: 16px;
+            display: flex;
+            gap: 18px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        .site-footer .footer-links a {
+            color: #c9a84c;
+            text-decoration: none;
+            font-size: 0.85rem;
+            font-weight: 600;
+            transition: color 0.3s;
+        }
+        .site-footer .footer-links a:hover { color: #ffffff; }
+
+        /* ============================================================
+           RESPONSIVE
+           ============================================================ */
+        @media (max-width: 768px) {
+            .menu-icono { display: block; }
+            .site-header .navbar ul {
+                display: none;
+                flex-direction: column;
+                align-items: flex-start;
+                background: rgba(255, 255, 255, 0.98);
+                position: absolute;
+                top: 100%;
+                left: 0;
+                width: 100%;
+                padding: 20px;
+                z-index: 100;
+                list-style: none;
+                border-bottom: 2px solid var(--ink);
+                box-shadow: 0 6px 20px rgba(0,0,0,0.1);
+            }
+            #menu-toggle:checked ~ .navbar ul { display: flex; }
+            .information-box { grid-template-columns: 1fr; }
+            .information h2.section-title { font-size: 1.7rem; }
+            .crono-img img { width: 100%; }
+            .header-img img { max-width: 100%; }
+        }
+        @media (max-width: 600px) {
+            .hero-card { padding: 40px 24px 32px; box-shadow: 8px 8px 0 var(--ink); }
+            .hero-card h1 { font-size: 2rem; }
+            .btn { padding: 14px 34px; font-size: 1rem; }
+            .sound-port-grid { grid-template-columns: repeat(2, 1fr); gap: 10px; }
+            .sound-port-section { padding: 35px 12px; margin: 25px 10px; border-radius: 14px; }
+            .sound-port-title { font-size: 1.5rem; }
+            .sound-port-card { padding: 16px 10px 14px; }
+            .quiz-container { padding: 25px 20px; }
+            .quiz-header h2 { font-size: 1.5rem; }
+            .question-text { font-size: 1.1rem; }
+            .score-num { font-size: 2.5rem; }
+            .result-actions { flex-direction: column; align-items: center; }
+            .result-actions .action-btn { width: 100%; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Audio de benvinguda: intenta sonar automàticament; si el navegador ho bloqueja, sona al primer clic -->
+    <audio id="welcomeAudio" preload="auto">
+        <source src="bos.wav" type="audio/wav">
+    </audio>
+
+    <!-- ===================== HEADER / FLAG NAV ===================== -->
+    <header class="site-header">
+        <div class="header-inner">
+            <a href="#top" class="logo">La Sexta Aumentada</a>
+            <input type="checkbox" id="menu-toggle">
+            <label for="menu-toggle" class="menu-icono-label">
+                <img class="menu-icono" src="menu.png" alt="Menú de navegació">
+            </label>
+            <nav class="navbar">
+                <ul>
+                    <li><img src="Acorde aumentado.jpeg" alt="Acord augmentat"><a href="#card-interval">Interval</a></li>
+                    <li><img src="Italia.png" alt="Itàlia"><a href="#card-italiana">Italiana</a></li>
+                    <li><img src="Francesa.png" alt="França"><a href="#card-francesa">Francesa</a></li>
+                    <li><img src="Alemanya.png" alt="Alemanya"><a href="#card-alemanya">Alemanya</a></li>
+                    <li><img src="suïssa.png" alt="Suïssa"><a href="#card-suissa">Suïssa</a></li>
+                    <li><img src="Wagner.png" alt="Wagner"><a href="#card-wagneriana">Wagneriana</a></li>
+                    <li><span class="nav-emoji">🎛️</span><a href="#sound-port">So</a></li>
+                    <li><span class="nav-emoji">🎯</span><a href="#quiz">Qüestionari</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- ===================== HERO / LANDING ===================== -->
+    <section class="hero" id="top">
+        <div class="hero-card">
+            <span class="badge">🎵 Teoria Musical Interactiva</span>
+            <h1>
+                La Sexta Aumentada
+                <span class="accent">Les Sisenes Augmentades</span>
+            </h1>
+            <p class="lead">
+                Explora les cinc sisenes augmentades —italiana, francesa, alemanya, suïssa i wagneriana— amb àudios, diagrames d'entrellat harmònic i un qüestionari interactiu.
+            </p>
+
+            <div class="chips">
+                <span class="chip"><span class="flag">🇮🇹</span> Italiana</span>
+                <span class="chip"><span class="flag">🇫🇷</span> Francesa</span>
+                <span class="chip"><span class="flag">🇩🇪</span> Alemanya</span>
+                <span class="chip"><span class="flag">🇨🇭</span> Suïssa</span>
+                <span class="chip"><span class="flag">🎭</span> Wagneriana</span>
+            </div>
+
+            <a href="#contingut" class="btn">Explorar la Web →</a>
+            <a href="#quiz" class="btn-secondary">🎯 Qüestionari Interactiu</a>
+        </div>
+    </section>
+
+    <!-- ===================== CONTENT INTRO ===================== -->
+    <section class="content-header" id="contingut">
+        <div class="container">
+            <div class="header-txt">
+                <h2>LES SISENES AUMENTADES</h2>
+                <p>
+                    Són acords alterats de funció predominant, caracteritzats per l'interval de sisena augmentada
+                    que es forma entre el baix i la nota superior. La seua funció principal és resoldre cromàticament cap a la dominant. Els
+                    cinc tipus existents són l'italiana, la francesa, l'alemany, la suïssa i la wagneriana.
+                </p>
+            </div>
+            <div class="header-img">
+                <img src="interval-sisena-aumentada.jpg" alt="Interval de Sisena Aumentada">
+            </div>
+        </div>
+    </section>
+
+    <!-- ===================== SOUND PORT ===================== -->
+    <section class="sound-port-section" id="sound-port">
+        <h2 class="sound-port-title">🎛️ PUERTO DE SO</h2>
+        <p class="sound-port-subtitle">Selecciona una sisena per escoltar-la</p>
+
+            <div class="sound-port-grid" id="soundPortGrid">
+            <div class="sound-port-card" data-audio="Sons Sisenes Aumentades/audio-italiana.wav" data-name="Italiana">
+                <span class="port-icon">🇮🇹</span>
+                <div class="port-name">Italiana</div>
+                <span class="port-badge">Triada</span>
+                <div class="port-wave"><span></span><span></span><span></span><span></span><span></span></div>
+            </div>
+            <div class="sound-port-card" data-audio="Sons Sisenes Aumentades/audio-francesa.wav" data-name="Francesa">
+                <span class="port-icon">🇫🇷</span>
+                <div class="port-name">Francesa</div>
+                <span class="port-badge">Quatriada</span>
+                <div class="port-wave"><span></span><span></span><span></span><span></span><span></span></div>
+            </div>
+            <div class="sound-port-card" data-audio="Sons Sisenes Aumentades/audio-alemanya.wav" data-name="Alemanya">
+                <span class="port-icon">🇩🇪</span>
+                <div class="port-name">Alemanya</div>
+                <span class="port-badge">Quatriada</span>
+                <div class="port-wave"><span></span><span></span><span></span><span></span><span></span></div>
+            </div>
+            <div class="sound-port-card" data-audio="Sons Sisenes Aumentades/audio-suissa.wav" data-name="Suïssa">
+                <span class="port-icon">🇨🇭</span>
+                <div class="port-name">Suïssa</div>
+                <span class="port-badge">Quatriada</span>
+                <div class="port-wave"><span></span><span></span><span></span><span></span><span></span></div>
+            </div>
+            <div class="sound-port-card" data-audio="Sons Sisenes Aumentades/audio-wagneriana.wav" data-name="Wagneriana">
+                <span class="port-icon">🎭</span>
+                <div class="port-name">Wagneriana</div>
+                <span class="port-badge">Quatriada</span>
+                <div class="port-wave"><span></span><span></span><span></span><span></span><span></span></div>
+            </div>
+        </div>
+
+        <button class="sound-port-stop" id="soundPortStop">⏹ ATURA TOTS</button>
+    </section>
+
+    <!-- ===================== INFORMATION / CARDS ===================== -->
+    <section class="information" id="cards-section">
+        <div class="container">
+            <h2 class="section-title">DIFERENTS NACIONALITATS</h2>
+            <div class="crono-img">
+                <img src="ChatGPT Image 14 de jul. del 2026, 19_10_07.png" alt="Arbre cronològic de les sisenes augmentades">
+            </div>
+
+            <div class="information-box">
+
+                <div class="card-1" id="card-interval">
+                    <h3>Interval de Sisena Aumentada</h3>
+                    <img src="interval-sisena-aumentada.jpg" alt="Interval de sisena augmentada">
+                    <span class="badge-type">6AUM</span>
+                </div>
+
+                <div class="card-1" id="card-italiana">
+                    <h3>Sisena Italiana</h3>
+                    <img src="sisena-italiana.jpg" alt="Sisena Italiana en el pentagrama">
+                    <span class="badge-type">ACORD TRIADA</span>
+
+                    <audio controls>
+                        <source src="Sons Sisenes Aumentades/audio-italiana.wav" type="audio/wav">
+                    </audio>
+
+                    <div class="entrellat-section">
+                        <h4>🎼 Entrellat de la Sisena Italiana</h4>
+                        <p class="entrellat-desc">L'interval de <strong>sisena augmentada</strong> (Fa–Re♯) es resol per moviment cromàtic contrari cap a l'octava de la dominant (Mi–Mi). La tònica (Do) es pot mantenir com a nota comuna o resoldre a la quinta (Si).</p>
+                        <img src="entrellat-italiana.svg" alt="Diagrama d'entrellat de la Sisena Italiana" class="entrellat-img">
+                    </div>
+                </div>
+
+                <div class="card-1" id="card-francesa">
+                    <h3>Sisena Francesa</h3>
+                    <img src="sisena-francesa.jpg" alt="Sisena Francesa en el pentagrama">
+                    <span class="badge-type">ACORD QUATRIADA</span>
+
+                    <audio controls>
+                        <source src="Sons Sisenes Aumentades/audio-francesa.wav" type="audio/wav">
+                    </audio>
+
+                    <div class="entrellat-section">
+                        <h4>🎼 Entrellat de la Sisena Francesa</h4>
+                        <p class="entrellat-desc">L'interval de <strong>sisena augmentada</strong> (Fa–Re♯) es resol per moviment cromàtic contrari cap a l'octava de la dominant (Mi–Mi). La tònica (La) descendeix un semitò cap a la sensible (Sol♯), mentre que el segon grau (Si) es manté com a nota comuna (7a del V).</p>
+                        <img src="entrellat-francesa.svg" alt="Diagrama d'entrellat de la Sisena Francesa" class="entrellat-img">
+                    </div>
+                </div>
+
+                <div class="card-1" id="card-alemanya">
+                    <h3>Sisena Alemanya</h3>
+                    <img src="sisena-alemanya.jpg" alt="Sisena Alemanya en el pentagrama">
+                    <span class="badge-type">ACORD QUATRIADA</span>
+
+                    <audio controls>
+                        <source src="Sons Sisenes Aumentades/audio-alemanya.wav" type="audio/wav">
+                    </audio>
+
+                    <div class="entrellat-section">
+                        <h4>🎼 Entrellat de la Sisena Alemanya</h4>
+                        <p class="entrellat-desc">L'interval de <strong>sisena augmentada</strong> (Fa–Re♯) es resol per moviment cromàtic contrari cap a l'octava de la dominant (Mi–Mi). Tant el baix (Fa) com el tercer grau baixat (Do) descendeixen un semitò, creant les anomenades <strong>quintes de Mozart</strong> (quintes paral·leles Fa–Do → Mi–Si).</p>
+                        <img src="entrellat-alemanya.svg" alt="Diagrama d'entrellat de la Sisena Alemanya" class="entrellat-img">
+                    </div>
+                </div>
+
+                <div class="card-1" id="card-suissa">
+                    <h3>Sisena Suïssa</h3>
+                    <img src="sisena-suissa.jpg" alt="Sisena Suïssa en el pentagrama">
+                    <span class="badge-type">ACORD QUATRIADA</span>
+
+                    <audio controls>
+                        <source src="Sons Sisenes Aumentades/audio-suissa.wav" type="audio/wav">
+                    </audio>
+
+                    <div class="entrellat-section">
+                        <h4>🎼 Entrellat de la Sisena Suïssa</h4>
+                        <p class="entrellat-desc">L'interval de <strong>sisena augmentada</strong> (Fa–Re♯) es resol per moviment cromàtic contrari cap a l'octava de la dominant (Mi–Mi). El tret distintiu: el tercer grau és <strong>major (Do♯)</strong> en lloc de menor, evitant les quintes paral·leles de l'Alemanya i resolent per moviment contrari enharmònic (Do♯ → La / Sol♯).</p>
+                        <img src="entrellat-suissa.svg" alt="Diagrama d'entrellat de la Sisena Suïssa" class="entrellat-img">
+                    </div>
+                </div>
+
+                <div class="card-1" id="card-wagneriana">
+                    <h3>Sisena Wagneriana</h3>
+                    <img src="sisena-wagneriana.jpg" alt="Sisena Wagneriana en el pentagrama">
+                    <span class="badge-type">ACORD QUATRIADA</span>
+
+                    <audio controls>
+                        <source src="Sons Sisenes Aumentades/audio-wagneriana.wav" type="audio/wav">
+                    </audio>
+
+                    <div class="entrellat-section">
+                        <h4>🎼 Entrellat de la Sisena Wagneriana</h4>
+                        <p class="entrellat-desc">L'interval de <strong>sisena augmentada</strong> (Fa–Re♯) es resol per moviment cromàtic contrari cap a l'octava de la dominant (Mi–Mi). Característicament afegeix la 7a menor (Sib) i la 9a disminuïda (Re♭), creant una tensió extrema que es resoldrà cap a un acord de V⁷ amb tensions.</p>
+                        <img src="entrellat-wagneriana.svg" alt="Diagrama d'entrellat de la Sisena Wagneriana" class="entrellat-img">
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ===================== QUIZ ===================== -->
+    <section class="quiz-section" id="quiz">
+        <div class="quiz-wrapper">
+            <div class="quiz-container">
+                <div class="quiz-header">
+                    <h2>🎵 Qüestionari</h2>
+                    <p class="subtitle">Sisenes Aumentades</p>
+                </div>
+
+                <div class="progress-wrapper">
+                    <div class="progress-track">
+                        <div class="progress-fill" id="progress"></div>
+                    </div>
+                    <span class="progress-counter" id="progress-counter">1 / 5</span>
+                </div>
+
+                <div id="quiz-screen">
+                    <div class="question-card">
+                        <div class="question-number" id="question-num">PREGUNTA 1</div>
+                        <div class="question-text" id="question">Carregant...</div>
+                    </div>
+
+                    <ul class="options-list" id="options"></ul>
+
+                    <div class="feedback-box" id="feedback">
+                        <div class="fb-label" id="fb-label"></div>
+                        <div id="fb-text"></div>
+                    </div>
+
+                    <button class="action-btn" id="action-btn">Següent pregunta</button>
+                </div>
+
+                <div id="result-screen">
+                    <div class="result-icon" id="result-icon">🏆</div>
+                    <h3>Qüestionari completat!</h3>
+                    <p>La teva puntuació</p>
+                    <div class="score-box">
+                        <div class="score-num" id="final-score">0 / 5</div>
+                    </div>
+                    <p id="score-comment"></p>
+                    <div class="result-actions">
+                        <button class="action-btn" onclick="resetQuiz()">Torna a provar</button>
+                        <a class="back-link" href="#top">← Tornar a dalt</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===================== FOOTER ===================== -->
+    <footer class="site-footer">
+        <div class="footer-logo">La Sexta Aumentada</div>
+        <p>Recurs educatiu de teoria musical sobre les sisenes augmentades.<br>Italiana · Francesa · Alemanya · Suïssa · Wagneriana</p>
+        <div class="footer-links">
+            <a href="#card-interval">Interval</a>
+            <a href="#card-italiana">Italiana</a>
+            <a href="#card-francesa">Francesa</a>
+            <a href="#card-alemanya">Alemanya</a>
+            <a href="#card-suissa">Suïssa</a>
+            <a href="#card-wagneriana">Wagneriana</a>
+            <a href="#quiz">Qüestionari</a>
+        </div>
+    </footer>
+
+    <!-- ===================== SCRIPTS ===================== -->
+    <script>
+        /* ---- Welcome audio (autoplay with fallback) ---- */
+        (function () {
+            var audio = document.getElementById('welcomeAudio');
+            if (!audio) return;
+            var playPromise = audio.play();
+            if (playPromise !== undefined) {
+                playPromise.catch(function () {
+                    var played = false;
+                    function playOnInteraction() {
+                        if (played) return;
+                        played = true;
+                        audio.play().catch(function (e) { console.warn('No es pot reproduir bos.wav:', e); });
+                        document.removeEventListener('click', playOnInteraction);
+                        document.removeEventListener('touchstart', playOnInteraction);
+                    }
+                    document.addEventListener('click', playOnInteraction);
+                    document.addEventListener('touchstart', playOnInteraction);
+                });
+            }
+        })();
+
+        /* ---- Sound Port ---- */
+        (function () {
+            var cards = document.querySelectorAll('.sound-port-card');
+            var stopBtn = document.getElementById('soundPortStop');
+            var currentAudio = null;
+            var currentCard = null;
+
+            function stopAll() {
+                if (currentAudio) {
+                    currentAudio.pause();
+                    currentAudio.currentTime = 0;
+                    currentAudio = null;
+                }
+                if (currentCard) {
+                    currentCard.classList.remove('playing');
+                    currentCard = null;
+                }
+            }
+
+            function playAudio(card) {
+                var src = card.getAttribute('data-audio');
+                if (!src) return;
+
+                if (currentCard === card && currentAudio && !currentAudio.paused) {
+                    stopAll();
+                    return;
+                }
+
+                stopAll();
+
+                var audio = new Audio(src);
+                audio.volume = 0.6;
+                audio.addEventListener('ended', function () {
+                    card.classList.remove('playing');
+                    if (currentAudio === audio) currentAudio = null;
+                    if (currentCard === card) currentCard = null;
+                });
+                audio.play().then(function () {
+                    currentAudio = audio;
+                    currentCard = card;
+                    card.classList.add('playing');
+                }).catch(function (e) {
+                    console.warn('No es pot reproduir:', e);
+                });
+            }
+
+            cards.forEach(function (card) {
+                card.addEventListener('click', function () { playAudio(card); });
+            });
+
+            if (stopBtn) {
+                stopBtn.addEventListener('click', stopAll);
+            }
+        })();
+
+        /* ---- Quiz ---- */
+        (function () {
+            const questions = [
+                {
+                    question: "Quines notes formen l'interval de sisena augmentada característic en la tonalitat de La menor (Am)?",
+                    options: [
+                        "Fa i Re sostingut",
+                        "Fa i Re",
+                        "Fa sostingut i Re sostingut",
+                        "Sib i Sol"
+                    ],
+                    correct: 0,
+                    explanation: "En La menor, la sisena augmentada es construeix sobre el 6è grau baixat (Fa) i el 4t grau elevat (Re sostingut). La resolució natural d'aquest interval és obrir-se cap a l'octava de la dominant (Mi - Mi)."
+                },
+                {
+                    question: "Com es diferencia l'acord de Sisena Francesa de la Sisena Italiana?",
+                    options: [
+                        "La Francesa conté la tònica duplicada.",
+                        "La Francesa afegeix el segon grau a l'estructura bàsica.",
+                        "La Francesa afegeix la tercera menor a sobre de la tònica.",
+                        "La Francesa no es resol en la dominant."
+                    ],
+                    correct: 1,
+                    explanation: "Mentre que la Sisena Italiana té només 3 notes (6è grau baixat, 1r grau duplicat, 4t grau elevat), la Francesa n'afegeix una quarta: el 2n grau de l'escala. Això crea una sonoritat característica amb una quarta augmentada a l'interior de l'acord."
+                },
+                {
+                    question: "Per què s'ha de tenir especial precaució en resoldre directament una Sisena Alemanya cap a l'acord de Dominant (V)?",
+                    options: [
+                        "Perquè es creen quintes paral·leles (les anomenades 'quintes de Mozart').",
+                        "Perquè és impossible de cantar en música coral.",
+                        "Perquè destrueix l'efecte de la tònica.",
+                        "Perquè s'obté una quarta disminuïda prohibida."
+                    ],
+                    correct: 0,
+                    explanation: "En passar directament de la Sisena Alemanya al V, la quinta justa paral·lela entre el baix (6è grau baixat) i el 3r grau baixat es mou cap a la quinta del V. Tot i que s'anomenen 'quintes de Mozart' perquè ell les feia servir sovint, molts teòrics clàssics les evitaven resolent primer cap a un acord de quarta i sisena cadencial (I 6/4)."
+                },
+                {
+                    question: "Quina estructura intervàl·lica (des del baix) defineix millor la Sisena Alemanya?",
+                    options: [
+                        "Tercera major, quarta augmentada, sisena augmentada",
+                        "Tercera menor, quinta justa, sisena augmentada",
+                        "Tercera major, quinta justa, sisena augmentada",
+                        "Tercera menor, quarta augmentada, sisena augmentada"
+                    ],
+                    correct: 2,
+                    explanation: "Des de la nota del baix (6è grau baixat), la Sisena Alemanya es construeix amb una tercera major (la tònica), una quinta justa (el 3r grau baixat) i una sisena augmentada (el 4t grau elevat)."
+                },
+                {
+                    question: "En una tonalitat Major, què li passa al 3r grau quan construïm la Sisena Alemanya?",
+                    options: [
+                        "Es manté natural.",
+                        "S'ha d'abaixar un semitò (esdevé un 3r grau baixat).",
+                        "S'ha d'apujar un semitò.",
+                        "S'elimina completament de l'acord."
+                    ],
+                    correct: 1,
+                    explanation: "Per mantenir l'estructura de l'acord d'Alemanya en una tonalitat Major (que requereix una quinta justa des del baix), s'ha d'abaixar el tercer grau de l'escala un semitò per correspondre's amb l'homòloga menor."
+                }
+            ];
+
+            const letters = ['A', 'B', 'C', 'D'];
+
+            let currentQuestionIndex = 0;
+            let score = 0;
+            let answered = false;
+
+            const questionEl = document.getElementById('question');
+            const questionNumEl = document.getElementById('question-num');
+            const optionsContainer = document.getElementById('options');
+            const feedbackEl = document.getElementById('feedback');
+            const fbLabel = document.getElementById('fb-label');
+            const fbText = document.getElementById('fb-text');
+            const actionBtn = document.getElementById('action-btn');
+            const progressFill = document.getElementById('progress');
+            const progressCounter = document.getElementById('progress-counter');
+            const quizScreen = document.getElementById('quiz-screen');
+            const resultScreen = document.getElementById('result-screen');
+            const finalScoreEl = document.getElementById('final-score');
+            const scoreCommentEl = document.getElementById('score-comment');
+            const resultIcon = document.getElementById('result-icon');
+
+            function loadQuestion() {
+                answered = false;
+                feedbackEl.className = 'feedback-box';
+                feedbackEl.style.display = 'none';
+                actionBtn.style.display = 'none';
+
+                const q = questions[currentQuestionIndex];
+                questionNumEl.textContent = `PREGUNTA ${currentQuestionIndex + 1}`;
+                questionEl.textContent = q.question;
+
+                const pct = ((currentQuestionIndex) / questions.length) * 100;
+                progressFill.style.width = `${pct}%`;
+                progressCounter.textContent = `${currentQuestionIndex + 1} / ${questions.length}`;
+
+                optionsContainer.innerHTML = '';
+                q.options.forEach((opt, i) => {
+                    const li = document.createElement('li');
+                    li.className = 'option-item';
+                    li.innerHTML = `<span class="option-letter">${letters[i]}</span>${opt}`;
+                    li.addEventListener('click', () => selectOption(i));
+                    optionsContainer.appendChild(li);
+                });
+            }
+
+            function selectOption(idx) {
+                if (answered) return;
+                answered = true;
+
+                const q = questions[currentQuestionIndex];
+                const items = optionsContainer.querySelectorAll('.option-item');
+
+                items.forEach((item, i) => {
+                    item.classList.add('disabled');
+                    if (i === q.correct) item.classList.add('correct');
+                });
+
+                const isCorrect = idx === q.correct;
+                if (isCorrect) {
+                    score++;
+                } else {
+                    items[idx].classList.add('incorrect');
+                }
+
+                fbLabel.textContent = isCorrect ? '✅ Correcte' : '❌ Incorrecte';
+                fbText.textContent = q.explanation;
+                feedbackEl.className = `feedback-box ${isCorrect ? 'correct' : 'incorrect'}`;
+
+                actionBtn.style.display = 'block';
+                actionBtn.textContent = currentQuestionIndex === questions.length - 1
+                    ? 'Veure resultats'
+                    : 'Següent pregunta →';
+            }
+
+            actionBtn.addEventListener('click', () => {
+                if (currentQuestionIndex < questions.length - 1) {
+                    currentQuestionIndex++;
+                    loadQuestion();
+                } else {
+                    showResults();
+                }
+            });
+
+            function showResults() {
+                progressFill.style.width = '100%';
+                progressCounter.textContent = `${questions.length} / ${questions.length}`;
+                quizScreen.style.display = 'none';
+                resultScreen.style.display = 'block';
+
+                finalScoreEl.textContent = `${score} / ${questions.length}`;
+
+                const pct = (score / questions.length) * 100;
+                let icon, comment;
+                if (pct === 100) {
+                    icon = '🏆';
+                    comment = 'Perfecte! Domines absolutament les sisenes aumentades. Ets al nivell d\'un teòric de l\'harmonia!';
+                } else if (pct >= 70) {
+                    icon = '🌟';
+                    comment = 'Molt bé! Tens una base harmònica excel·lent, només et cal polir algun detall.';
+                } else if (pct >= 50) {
+                    icon = '📖';
+                    comment = 'No està malament, però vigila les diferències subtils entre els diferents tipus de sisenes.';
+                } else {
+                    icon = '🎯';
+                    comment = 'Toca repassar! Les sisenes aumentades són complexes, torna a estudiar la teoria i intenta-ho de nou.';
+                }
+                resultIcon.textContent = icon;
+                scoreCommentEl.textContent = comment;
+            }
+
+            window.resetQuiz = function () {
+                currentQuestionIndex = 0;
+                score = 0;
+                resultScreen.style.display = 'none';
+                quizScreen.style.display = 'block';
+                loadQuestion();
+            };
+
+            loadQuestion();
+        })();
+    </script>
+</body>
+</html>
