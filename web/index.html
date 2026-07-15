@@ -1,0 +1,596 @@
+<!DOCTYPE html>
+<html lang="ca">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- === SEO TAGS === -->
+    <title>La Sexta Aumentada – Web Interactiva | Música</title>
+    <meta name="description" content="Descobreix les sisenes augmentades: Italiana, Francesa, Alemanya, Suïssa i Wagneriana. Web interactiva amb àudios, diagrames d'entrellat harmònic i qüestionari sobre teoria musical.">
+    <meta name="keywords" content="sisena augmentada, sisena italiana, sisena francesa, sisena alemanya, sisena suïssa, sisena wagneriana, música clàssica, harmonia, acords alterats, teoria musical">
+    <meta name="author" content="La Sexta Aumentada">
+    <meta name="robots" content="index, follow">
+    <meta name="language" content="ca">
+    <link rel="canonical" href="https://www.lasextaaumentada.com/">
+
+    <!-- === OPEN GRAPH (Facebook, LinkedIn, WhatsApp) === -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="La Sexta Aumentada – Web Interactiva de Teoria Musical">
+    <meta property="og:description" content="Explora les 5 sisenes augmentades: Italiana, Francesa, Alemanya, Suïssa i Wagneriana. Àudios, diagrames i qüestionari interactiu.">
+    <meta property="og:url" content="https://www.lasextaaumentada.com/">
+    <meta property="og:image" content="https://www.lasextaaumentada.com/Imagenes/interval-sisena-aumentada.jpg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:locale" content="ca_ES">
+    <meta property="og:site_name" content="La Sexta Aumentada">
+
+    <!-- === TWITTER CARDS === -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="La Sexta Aumentada – Web Interactiva de Teoria Musical">
+    <meta name="twitter:description" content="Explora les 5 sisenes augmentades: Italiana, Francesa, Alemanya, Suïssa i Wagneriana.">
+    <meta name="twitter:image" content="https://www.lasextaaumentada.com/Imagenes/interval-sisena-aumentada.jpg">
+
+    <!-- === SCHEMA.ORG STRUCTURED DATA (JSON-LD) === -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebSite",
+      "name": "La Sexta Aumentada",
+      "url": "https://www.lasextaaumentada.com/",
+      "description": "Web interactiva sobre les sisenes augmentades en música: Italiana, Francesa, Alemanya, Suïssa i Wagneriana.",
+      "inLanguage": "ca",
+      "educationalUse": "learning resource",
+      "audience": {
+        "@type": "Audience",
+        "audienceType": "music students and educators"
+      },
+      "about": {
+        "@type": "Thing",
+        "name": "Augmented Sixth Chords",
+        "description": "Music theory educational resource about augmented sixth chords"
+      }
+    }
+    </script>
+
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Audio de benvinguda: intenta sonar automàticament; si el navegador ho bloqueja, sona al primer clic -->
+    <audio id="welcomeAudio" preload="auto">
+        <source src="bos.wav" type="audio/wav">
+    </audio>
+
+    <!-- ===================== HEADER / FLAG NAV ===================== -->
+    <header class="site-header">
+        <div class="header-inner">
+            <a href="#top" class="logo">La Sexta Aumentada</a>
+            <input type="checkbox" id="menu-toggle">
+            <label for="menu-toggle" class="menu-icono-label">
+                <img class="menu-icono" src="menu.png" alt="Menú de navegació">
+            </label>
+            <nav class="navbar">
+                <ul>
+                    <li><img src="Acorde aumentado.jpeg" alt="Acord augmentat"><a href="#card-interval">Interval</a></li>
+                    <li><img src="Italia.png" alt="Itàlia"><a href="#card-italiana">Italiana</a></li>
+                    <li><img src="Francesa.png" alt="França"><a href="#card-francesa">Francesa</a></li>
+                    <li><img src="Alemanya.png" alt="Alemanya"><a href="#card-alemanya">Alemanya</a></li>
+                    <li><img src="suïssa.png" alt="Suïssa"><a href="#card-suissa">Suïssa</a></li>
+                    <li><img src="Wagner.png" alt="Wagner"><a href="#card-wagneriana">Wagneriana</a></li>
+                    <li><span class="nav-emoji">🎛️</span><a href="#sound-port">So</a></li>
+                    <li><span class="nav-emoji">🎯</span><a href="#quiz">Qüestionari</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- ===================== HERO / LANDING ===================== -->
+    <section class="hero" id="top">
+        <div class="hero-card">
+            <span class="badge">🎵 Teoria Musical Interactiva</span>
+            <h1>
+                La Sexta Aumentada
+                <span class="accent">Les Sisenes Augmentades</span>
+            </h1>
+            <p class="lead">
+                Explora les cinc sisenes augmentades —italiana, francesa, alemanya, suïssa i wagneriana— amb àudios, diagrames d'entrellat harmònic i un qüestionari interactiu.
+            </p>
+
+            <div class="chips">
+                <span class="chip"><span class="flag">🇮🇹</span> Italiana</span>
+                <span class="chip"><span class="flag">🇫🇷</span> Francesa</span>
+                <span class="chip"><span class="flag">🇩🇪</span> Alemanya</span>
+                <span class="chip"><span class="flag">🇨🇭</span> Suïssa</span>
+                <span class="chip"><span class="flag">🎭</span> Wagneriana</span>
+            </div>
+
+            <a href="#contingut" class="btn">Explorar la Web →</a>
+            <a href="#quiz" class="btn-secondary">🎯 Qüestionari Interactiu</a>
+        </div>
+    </section>
+
+    <!-- ===================== CONTENT INTRO ===================== -->
+    <section class="content-header" id="contingut">
+        <div class="container">
+            <div class="header-txt">
+                <h2>LES SISENES AUMENTADES</h2>
+                <p>
+                    Són acords alterats de funció predominant, caracteritzats per l'interval de sisena augmentada
+                    que es forma entre el baix i la nota superior. La seua funció principal és resoldre cromàticament cap a la dominant. Els
+                    cinc tipus existents són l'italiana, la francesa, l'alemany, la suïssa i la wagneriana.
+                </p>
+            </div>
+            <div class="header-img">
+                <img src="interval-sisena-aumentada.jpg" alt="Interval de Sisena Aumentada">
+            </div>
+        </div>
+    </section>
+
+    <!-- ===================== SOUND PORT ===================== -->
+    <section class="sound-port-section" id="sound-port">
+        <h2 class="sound-port-title">🎛️ PUERTO DE SO</h2>
+        <p class="sound-port-subtitle">Selecciona una sisena per escoltar-la</p>
+
+            <div class="sound-port-grid" id="soundPortGrid">
+            <div class="sound-port-card" data-audio="Sons Sisenes Aumentades/audio-italiana.wav" data-name="Italiana">
+                <span class="port-icon">🇮🇹</span>
+                <div class="port-name">Italiana</div>
+                <span class="port-badge">Triada</span>
+                <div class="port-wave"><span></span><span></span><span></span><span></span><span></span></div>
+            </div>
+            <div class="sound-port-card" data-audio="Sons Sisenes Aumentades/audio-francesa.wav" data-name="Francesa">
+                <span class="port-icon">🇫🇷</span>
+                <div class="port-name">Francesa</div>
+                <span class="port-badge">Quatriada</span>
+                <div class="port-wave"><span></span><span></span><span></span><span></span><span></span></div>
+            </div>
+            <div class="sound-port-card" data-audio="Sons Sisenes Aumentades/audio-alemanya.wav" data-name="Alemanya">
+                <span class="port-icon">🇩🇪</span>
+                <div class="port-name">Alemanya</div>
+                <span class="port-badge">Quatriada</span>
+                <div class="port-wave"><span></span><span></span><span></span><span></span><span></span></div>
+            </div>
+            <div class="sound-port-card" data-audio="Sons Sisenes Aumentades/audio-suissa.wav" data-name="Suïssa">
+                <span class="port-icon">🇨🇭</span>
+                <div class="port-name">Suïssa</div>
+                <span class="port-badge">Quatriada</span>
+                <div class="port-wave"><span></span><span></span><span></span><span></span><span></span></div>
+            </div>
+            <div class="sound-port-card" data-audio="Sons Sisenes Aumentades/audio-wagneriana.wav" data-name="Wagneriana">
+                <span class="port-icon">🎭</span>
+                <div class="port-name">Wagneriana</div>
+                <span class="port-badge">Quatriada</span>
+                <div class="port-wave"><span></span><span></span><span></span><span></span><span></span></div>
+            </div>
+        </div>
+
+        <button class="sound-port-stop" id="soundPortStop">⏹ ATURA TOTS</button>
+    </section>
+
+    <!-- ===================== INFORMATION / CARDS ===================== -->
+    <section class="information" id="cards-section">
+        <div class="container">
+            <h2 class="section-title">DIFERENTS NACIONALITATS</h2>
+            <div class="crono-img">
+                <img src="ChatGPT Image 14 de jul. del 2026, 19_10_07.png" alt="Arbre cronològic de les sisenes augmentades">
+            </div>
+
+            <div class="information-box">
+
+                <div class="card-1" id="card-interval">
+                    <h3>Interval de Sisena Aumentada</h3>
+                    <img src="interval-sisena-aumentada.jpg" alt="Interval de sisena augmentada">
+                    <span class="badge-type">6AUM</span>
+                </div>
+
+                <div class="card-1" id="card-italiana">
+                    <h3>Sisena Italiana</h3>
+                    <img src="sisena-italiana.jpg" alt="Sisena Italiana en el pentagrama">
+                    <span class="badge-type">ACORD TRIADA</span>
+
+                    <audio controls>
+                        <source src="Sons Sisenes Aumentades/audio-italiana.wav" type="audio/wav">
+                    </audio>
+
+                    <div class="entrellat-section">
+                        <h4>🎼 Entrellat de la Sisena Italiana</h4>
+                        <p class="entrellat-desc">L'interval de <strong>sisena augmentada</strong> (Fa–Re♯) es resol per moviment cromàtic contrari cap a l'octava de la dominant (Mi–Mi). La tònica (Do) es pot mantenir com a nota comuna o resoldre a la quinta (Si).</p>
+                        <img src="entrellat-italiana.svg" alt="Diagrama d'entrellat de la Sisena Italiana" class="entrellat-img">
+                    </div>
+                </div>
+
+                <div class="card-1" id="card-francesa">
+                    <h3>Sisena Francesa</h3>
+                    <img src="sisena-francesa.jpg" alt="Sisena Francesa en el pentagrama">
+                    <span class="badge-type">ACORD QUATRIADA</span>
+
+                    <audio controls>
+                        <source src="Sons Sisenes Aumentades/audio-francesa.wav" type="audio/wav">
+                    </audio>
+
+                    <div class="entrellat-section">
+                        <h4>🎼 Entrellat de la Sisena Francesa</h4>
+                        <p class="entrellat-desc">L'interval de <strong>sisena augmentada</strong> (Fa–Re♯) es resol per moviment cromàtic contrari cap a l'octava de la dominant (Mi–Mi). La tònica (La) descendeix un semitò cap a la sensible (Sol♯), mentre que el segon grau (Si) es manté com a nota comuna (7a del V).</p>
+                        <img src="entrellat-francesa.svg" alt="Diagrama d'entrellat de la Sisena Francesa" class="entrellat-img">
+                    </div>
+                </div>
+
+                <div class="card-1" id="card-alemanya">
+                    <h3>Sisena Alemanya</h3>
+                    <img src="sisena-alemanya.jpg" alt="Sisena Alemanya en el pentagrama">
+                    <span class="badge-type">ACORD QUATRIADA</span>
+
+                    <audio controls>
+                        <source src="Sons Sisenes Aumentades/audio-alemanya.wav" type="audio/wav">
+                    </audio>
+
+                    <div class="entrellat-section">
+                        <h4>🎼 Entrellat de la Sisena Alemanya</h4>
+                        <p class="entrellat-desc">L'interval de <strong>sisena augmentada</strong> (Fa–Re♯) es resol per moviment cromàtic contrari cap a l'octava de la dominant (Mi–Mi). Tant el baix (Fa) com el tercer grau baixat (Do) descendeixen un semitò, creant les anomenades <strong>quintes de Mozart</strong> (quintes paral·leles Fa–Do → Mi–Si).</p>
+                        <img src="entrellat-alemanya.svg" alt="Diagrama d'entrellat de la Sisena Alemanya" class="entrellat-img">
+                    </div>
+                </div>
+
+                <div class="card-1" id="card-suissa">
+                    <h3>Sisena Suïssa</h3>
+                    <img src="sisena-suissa.jpg" alt="Sisena Suïssa en el pentagrama">
+                    <span class="badge-type">ACORD QUATRIADA</span>
+
+                    <audio controls>
+                        <source src="Sons Sisenes Aumentades/audio-suissa.wav" type="audio/wav">
+                    </audio>
+
+                    <div class="entrellat-section">
+                        <h4>🎼 Entrellat de la Sisena Suïssa</h4>
+                        <p class="entrellat-desc">L'interval de <strong>sisena augmentada</strong> (Fa–Re♯) es resol per moviment cromàtic contrari cap a l'octava de la dominant (Mi–Mi). El tret distintiu: el tercer grau és <strong>major (Do♯)</strong> en lloc de menor, evitant les quintes paral·leles de l'Alemanya i resolent per moviment contrari enharmònic (Do♯ → La / Sol♯).</p>
+                        <img src="entrellat-suissa.svg" alt="Diagrama d'entrellat de la Sisena Suïssa" class="entrellat-img">
+                    </div>
+                </div>
+
+                <div class="card-1" id="card-wagneriana">
+                    <h3>Sisena Wagneriana</h3>
+                    <img src="sisena-wagneriana.jpg" alt="Sisena Wagneriana en el pentagrama">
+                    <span class="badge-type">ACORD QUATRIADA</span>
+
+                    <audio controls>
+                        <source src="Sons Sisenes Aumentades/audio-wagneriana.wav" type="audio/wav">
+                    </audio>
+
+                    <div class="entrellat-section">
+                        <h4>🎼 Entrellat de la Sisena Wagneriana</h4>
+                        <p class="entrellat-desc">L'interval de <strong>sisena augmentada</strong> (Fa–Re♯) es resol per moviment cromàtic contrari cap a l'octava de la dominant (Mi–Mi). Característicament afegeix la 7a menor (Sib) i la 9a disminuïda (Re♭), creant una tensió extrema que es resoldrà cap a un acord de V⁷ amb tensions.</p>
+                        <img src="entrellat-wagneriana.svg" alt="Diagrama d'entrellat de la Sisena Wagneriana" class="entrellat-img">
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ===================== QUIZ ===================== -->
+    <section class="quiz-section" id="quiz">
+        <div class="quiz-wrapper">
+            <div class="quiz-container">
+                <div class="quiz-header">
+                    <h2>🎵 Qüestionari</h2>
+                    <p class="subtitle">Sisenes Aumentades</p>
+                </div>
+
+                <div class="progress-wrapper">
+                    <div class="progress-track">
+                        <div class="progress-fill" id="progress"></div>
+                    </div>
+                    <span class="progress-counter" id="progress-counter">1 / 5</span>
+                </div>
+
+                <div id="quiz-screen">
+                    <div class="question-card">
+                        <div class="question-number" id="question-num">PREGUNTA 1</div>
+                        <div class="question-text" id="question">Carregant...</div>
+                    </div>
+
+                    <ul class="options-list" id="options"></ul>
+
+                    <div class="feedback-box" id="feedback">
+                        <div class="fb-label" id="fb-label"></div>
+                        <div id="fb-text"></div>
+                    </div>
+
+                    <button class="action-btn" id="action-btn">Següent pregunta</button>
+                </div>
+
+                <div id="result-screen">
+                    <div class="result-icon" id="result-icon">🏆</div>
+                    <h3>Qüestionari completat!</h3>
+                    <p>La teva puntuació</p>
+                    <div class="score-box">
+                        <div class="score-num" id="final-score">0 / 5</div>
+                    </div>
+                    <p id="score-comment"></p>
+                    <div class="result-actions">
+                        <button class="action-btn" onclick="resetQuiz()">Torna a provar</button>
+                        <a class="back-link" href="#top">← Tornar a dalt</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===================== FOOTER ===================== -->
+    <footer class="site-footer">
+        <div class="footer-logo">La Sexta Aumentada</div>
+        <p>Recurs educatiu de teoria musical sobre les sisenes augmentades.<br>Italiana · Francesa · Alemanya · Suïssa · Wagneriana</p>
+        <div class="footer-links">
+            <a href="#card-interval">Interval</a>
+            <a href="#card-italiana">Italiana</a>
+            <a href="#card-francesa">Francesa</a>
+            <a href="#card-alemanya">Alemanya</a>
+            <a href="#card-suissa">Suïssa</a>
+            <a href="#card-wagneriana">Wagneriana</a>
+            <a href="#quiz">Qüestionari</a>
+        </div>
+    </footer>
+
+    <!-- ===================== SCRIPTS ===================== -->
+    <script>
+        /* ---- Welcome audio (autoplay with fallback) ---- */
+        (function () {
+            var audio = document.getElementById('welcomeAudio');
+            if (!audio) return;
+            var playPromise = audio.play();
+            if (playPromise !== undefined) {
+                playPromise.catch(function () {
+                    var played = false;
+                    function playOnInteraction() {
+                        if (played) return;
+                        played = true;
+                        audio.play().catch(function (e) { console.warn('No es pot reproduir bos.wav:', e); });
+                        document.removeEventListener('click', playOnInteraction);
+                        document.removeEventListener('touchstart', playOnInteraction);
+                    }
+                    document.addEventListener('click', playOnInteraction);
+                    document.addEventListener('touchstart', playOnInteraction);
+                });
+            }
+        })();
+
+        /* ---- Sound Port ---- */
+        (function () {
+            var cards = document.querySelectorAll('.sound-port-card');
+            var stopBtn = document.getElementById('soundPortStop');
+            var currentAudio = null;
+            var currentCard = null;
+
+            function stopAll() {
+                if (currentAudio) {
+                    currentAudio.pause();
+                    currentAudio.currentTime = 0;
+                    currentAudio = null;
+                }
+                if (currentCard) {
+                    currentCard.classList.remove('playing');
+                    currentCard = null;
+                }
+            }
+
+            function playAudio(card) {
+                var src = card.getAttribute('data-audio');
+                if (!src) return;
+
+                if (currentCard === card && currentAudio && !currentAudio.paused) {
+                    stopAll();
+                    return;
+                }
+
+                stopAll();
+
+                var audio = new Audio(src);
+                audio.volume = 0.6;
+                audio.addEventListener('ended', function () {
+                    card.classList.remove('playing');
+                    if (currentAudio === audio) currentAudio = null;
+                    if (currentCard === card) currentCard = null;
+                });
+                audio.play().then(function () {
+                    currentAudio = audio;
+                    currentCard = card;
+                    card.classList.add('playing');
+                }).catch(function (e) {
+                    console.warn('No es pot reproduir:', e);
+                });
+            }
+
+            cards.forEach(function (card) {
+                card.addEventListener('click', function () { playAudio(card); });
+            });
+
+            if (stopBtn) {
+                stopBtn.addEventListener('click', stopAll);
+            }
+        })();
+
+        /* ---- Quiz ---- */
+        (function () {
+            const questions = [
+                {
+                    question: "Quines notes formen l'interval de sisena augmentada característic en la tonalitat de La menor (Am)?",
+                    options: [
+                        "Fa i Re sostingut",
+                        "Fa i Re",
+                        "Fa sostingut i Re sostingut",
+                        "Sib i Sol"
+                    ],
+                    correct: 0,
+                    explanation: "En La menor, la sisena augmentada es construeix sobre el 6è grau baixat (Fa) i el 4t grau elevat (Re sostingut). La resolució natural d'aquest interval és obrir-se cap a l'octava de la dominant (Mi - Mi)."
+                },
+                {
+                    question: "Com es diferencia l'acord de Sisena Francesa de la Sisena Italiana?",
+                    options: [
+                        "La Francesa conté la tònica duplicada.",
+                        "La Francesa afegeix el segon grau a l'estructura bàsica.",
+                        "La Francesa afegeix la tercera menor a sobre de la tònica.",
+                        "La Francesa no es resol en la dominant."
+                    ],
+                    correct: 1,
+                    explanation: "Mentre que la Sisena Italiana té només 3 notes (6è grau baixat, 1r grau duplicat, 4t grau elevat), la Francesa n'afegeix una quarta: el 2n grau de l'escala. Això crea una sonoritat característica amb una quarta augmentada a l'interior de l'acord."
+                },
+                {
+                    question: "Per què s'ha de tenir especial precaució en resoldre directament una Sisena Alemanya cap a l'acord de Dominant (V)?",
+                    options: [
+                        "Perquè es creen quintes paral·leles (les anomenades 'quintes de Mozart').",
+                        "Perquè és impossible de cantar en música coral.",
+                        "Perquè destrueix l'efecte de la tònica.",
+                        "Perquè s'obté una quarta disminuïda prohibida."
+                    ],
+                    correct: 0,
+                    explanation: "En passar directament de la Sisena Alemanya al V, la quinta justa paral·lela entre el baix (6è grau baixat) i el 3r grau baixat es mou cap a la quinta del V. Tot i que s'anomenen 'quintes de Mozart' perquè ell les feia servir sovint, molts teòrics clàssics les evitaven resolent primer cap a un acord de quarta i sisena cadencial (I 6/4)."
+                },
+                {
+                    question: "Quina estructura intervàl·lica (des del baix) defineix millor la Sisena Alemanya?",
+                    options: [
+                        "Tercera major, quarta augmentada, sisena augmentada",
+                        "Tercera menor, quinta justa, sisena augmentada",
+                        "Tercera major, quinta justa, sisena augmentada",
+                        "Tercera menor, quarta augmentada, sisena augmentada"
+                    ],
+                    correct: 2,
+                    explanation: "Des de la nota del baix (6è grau baixat), la Sisena Alemanya es construeix amb una tercera major (la tònica), una quinta justa (el 3r grau baixat) i una sisena augmentada (el 4t grau elevat)."
+                },
+                {
+                    question: "En una tonalitat Major, què li passa al 3r grau quan construïm la Sisena Alemanya?",
+                    options: [
+                        "Es manté natural.",
+                        "S'ha d'abaixar un semitò (esdevé un 3r grau baixat).",
+                        "S'ha d'apujar un semitò.",
+                        "S'elimina completament de l'acord."
+                    ],
+                    correct: 1,
+                    explanation: "Per mantenir l'estructura de l'acord d'Alemanya en una tonalitat Major (que requereix una quinta justa des del baix), s'ha d'abaixar el tercer grau de l'escala un semitò per correspondre's amb l'homòloga menor."
+                }
+            ];
+
+            const letters = ['A', 'B', 'C', 'D'];
+
+            let currentQuestionIndex = 0;
+            let score = 0;
+            let answered = false;
+
+            const questionEl = document.getElementById('question');
+            const questionNumEl = document.getElementById('question-num');
+            const optionsContainer = document.getElementById('options');
+            const feedbackEl = document.getElementById('feedback');
+            const fbLabel = document.getElementById('fb-label');
+            const fbText = document.getElementById('fb-text');
+            const actionBtn = document.getElementById('action-btn');
+            const progressFill = document.getElementById('progress');
+            const progressCounter = document.getElementById('progress-counter');
+            const quizScreen = document.getElementById('quiz-screen');
+            const resultScreen = document.getElementById('result-screen');
+            const finalScoreEl = document.getElementById('final-score');
+            const scoreCommentEl = document.getElementById('score-comment');
+            const resultIcon = document.getElementById('result-icon');
+
+            function loadQuestion() {
+                answered = false;
+                feedbackEl.className = 'feedback-box';
+                feedbackEl.style.display = 'none';
+                actionBtn.style.display = 'none';
+
+                const q = questions[currentQuestionIndex];
+                questionNumEl.textContent = `PREGUNTA ${currentQuestionIndex + 1}`;
+                questionEl.textContent = q.question;
+
+                const pct = ((currentQuestionIndex) / questions.length) * 100;
+                progressFill.style.width = `${pct}%`;
+                progressCounter.textContent = `${currentQuestionIndex + 1} / ${questions.length}`;
+
+                optionsContainer.innerHTML = '';
+                q.options.forEach((opt, i) => {
+                    const li = document.createElement('li');
+                    li.className = 'option-item';
+                    li.innerHTML = `<span class="option-letter">${letters[i]}</span>${opt}`;
+                    li.addEventListener('click', () => selectOption(i));
+                    optionsContainer.appendChild(li);
+                });
+            }
+
+            function selectOption(idx) {
+                if (answered) return;
+                answered = true;
+
+                const q = questions[currentQuestionIndex];
+                const items = optionsContainer.querySelectorAll('.option-item');
+
+                items.forEach((item, i) => {
+                    item.classList.add('disabled');
+                    if (i === q.correct) item.classList.add('correct');
+                });
+
+                const isCorrect = idx === q.correct;
+                if (isCorrect) {
+                    score++;
+                } else {
+                    items[idx].classList.add('incorrect');
+                }
+
+                fbLabel.textContent = isCorrect ? '✅ Correcte' : '❌ Incorrecte';
+                fbText.textContent = q.explanation;
+                feedbackEl.className = `feedback-box ${isCorrect ? 'correct' : 'incorrect'}`;
+
+                actionBtn.style.display = 'block';
+                actionBtn.textContent = currentQuestionIndex === questions.length - 1
+                    ? 'Veure resultats'
+                    : 'Següent pregunta →';
+            }
+
+            actionBtn.addEventListener('click', () => {
+                if (currentQuestionIndex < questions.length - 1) {
+                    currentQuestionIndex++;
+                    loadQuestion();
+                } else {
+                    showResults();
+                }
+            });
+
+            function showResults() {
+                progressFill.style.width = '100%';
+                progressCounter.textContent = `${questions.length} / ${questions.length}`;
+                quizScreen.style.display = 'none';
+                resultScreen.style.display = 'block';
+
+                finalScoreEl.textContent = `${score} / ${questions.length}`;
+
+                const pct = (score / questions.length) * 100;
+                let icon, comment;
+                if (pct === 100) {
+                    icon = '🏆';
+                    comment = 'Perfecte! Domines absolutament les sisenes aumentades. Ets al nivell d\'un teòric de l\'harmonia!';
+                } else if (pct >= 70) {
+                    icon = '🌟';
+                    comment = 'Molt bé! Tens una base harmònica excel·lent, només et cal polir algun detall.';
+                } else if (pct >= 50) {
+                    icon = '📖';
+                    comment = 'No està malament, però vigila les diferències subtils entre els diferents tipus de sisenes.';
+                } else {
+                    icon = '🎯';
+                    comment = 'Toca repassar! Les sisenes aumentades són complexes, torna a estudiar la teoria i intenta-ho de nou.';
+                }
+                resultIcon.textContent = icon;
+                scoreCommentEl.textContent = comment;
+            }
+
+            window.resetQuiz = function () {
+                currentQuestionIndex = 0;
+                score = 0;
+                resultScreen.style.display = 'none';
+                quizScreen.style.display = 'block';
+                loadQuestion();
+            };
+
+            loadQuestion();
+        })();
+    </script>
+</body>
+</html>
